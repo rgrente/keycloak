@@ -33,8 +33,7 @@ jobs:
           name: keycloak-artifacts.zip
           retention-days: 2
           path: |
-            ~/.m2/repository/org/keycloak
-            !~/.m2/repository/org/keycloak/**/*.tar.gz
+            ~/.m2/repository/org/keycloak/keycloak-server-dist/15.0.0-SNAPSHOT/keycloak-server-dist-15.0.0-SNAPSHOT.tar.gz
 
       - name: Remove keycloak artifacts before caching
         if: steps.cache.outputs.cache-hit != 'true'
