@@ -139,6 +139,7 @@ public class SamlProtocol implements LoginProtocol {
     public static final String SAML_LOGIN_REQUEST_FORCEAUTHN = "SAML_LOGIN_REQUEST_FORCEAUTHN";
     public static final String SAML_FORCEAUTHN_REQUIREMENT = "true";
     public static final String SAML_LOGOUT_INITIATOR_CLIENT_ID = "SAML_LOGOUT_INITIATOR_CLIENT_ID";
+    public static final String SAML_REQUEST_AUTHNCONTEXT = "SAML_REQUEST_AUTHNCONTEXT";
 
     protected static final Logger logger = Logger.getLogger(SamlProtocol.class);
 
