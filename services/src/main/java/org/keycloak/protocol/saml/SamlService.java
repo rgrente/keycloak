@@ -465,7 +465,7 @@ public class SamlService extends AuthorizationEndpointBase {
             //for (int i = 0; i < crunchifyList.size(); i++) {
             //    System.out.println(crunchifyList.get(i));
             //}
-            authSession.setClientNote(SamlProtocol.SAML_REQUEST_AUTHNCONTEXT, Arrays.toString(requestAbstractType.getRequestedAuthnContext().getAuthnContextClassRef()));
+            authSession.setClientNote(SamlProtocol.SAML_REQUEST_AUTHNCONTEXT, String.join(", ", requestAbstractType.getRequestedAuthnContext().getAuthnContextClassRef()));
 
             // Handle NameIDPolicy from SP
             NameIDPolicyType nameIdPolicy = requestAbstractType.getNameIDPolicy();
