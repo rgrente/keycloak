@@ -19,6 +19,7 @@ package org.keycloak.sessions;
 
 import java.util.Map;
 import java.util.Set;
+import java.util.List;
 
 import org.keycloak.models.UserModel;
 
