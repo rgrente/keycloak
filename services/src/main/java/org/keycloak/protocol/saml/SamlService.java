@@ -17,6 +17,8 @@
 
 package org.keycloak.protocol.saml;
 
+import java.util.Arrays;
+
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
