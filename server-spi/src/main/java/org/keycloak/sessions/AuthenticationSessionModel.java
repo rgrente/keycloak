@@ -204,4 +204,6 @@ public interface AuthenticationSessionModel extends CommonClientSessionModel {
      * @param clientScopes {@code Set<String>} Can't be {@code null}.
      */
     void setClientScopes(Set<String> clientScopes);
+    
+    void setMultiClientNote(String name, List<String> values);
 }
