@@ -28,6 +28,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.List;
+
 
 /**
  * @author <a href="mailto:mkanis@redhat.com">Martin Kanis</a>
@@ -179,6 +181,17 @@ public class MapAuthenticationSessionAdapter implements AuthenticationSessionMod
                 parent.setUpdated(entity.getClientNotes().remove(name) != null);
             } else {
                 parent.setUpdated(!Objects.equals(entity.getClientNotes().put(name, value), value));
+            }
+        }
+    }
+    
+    @Override
+    public void setMultiClientNote(String name, List<String> values) {
+        if (name != null) {
+            if (value == null) {
+                parent.setUpdated(entity.getClientNotes().remove(name) != null);
+            } else {
+                parent.setUpdated(!Objects.equals(entity.getClientNotes().put(name, values), values));
             }
         }
     }
