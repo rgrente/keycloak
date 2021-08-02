@@ -462,7 +462,7 @@ public class SamlService extends AuthorizationEndpointBase {
             authSession.setClientNote(SamlProtocol.SAML_BINDING, bindingType);
             authSession.setClientNote(GeneralConstants.RELAY_STATE, relayState);
             authSession.setClientNote(SamlProtocol.SAML_REQUEST_ID, requestAbstractType.getID());
-            authSession.setClientNote(Arrays.toString(SamlProtocol.SAML_REQUEST_AUTHNCONTEXT, requestAbstractType.getRequestedAuthnContext().getAuthnContextClassRef().toArray()));
+            authSession.setClientNote(Arrays.toString(SamlProtocol.SAML_REQUEST_AUTHNCONTEXT, requestAbstractType.getRequestedAuthnContext().getAuthnContextClassRef()));
 
             // Handle NameIDPolicy from SP
             NameIDPolicyType nameIdPolicy = requestAbstractType.getNameIDPolicy();
