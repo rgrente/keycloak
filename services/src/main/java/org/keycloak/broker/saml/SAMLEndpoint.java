@@ -445,14 +445,14 @@ public class SAMLEndpoint {
                 }
 
                 // Validate InResponseTo attribute: must match the generated request ID
-                /*String expectedRequestId = authSession.getClientNote(SamlProtocol.SAML_REQUEST_ID);
+                String expectedRequestId = authSession.getClientNote(SamlProtocol.SAML_REQUEST_ID);
                 final boolean inResponseToValidationSuccess = validateInResponseToAttribute(responseType, expectedRequestId);
                 if (!inResponseToValidationSuccess)
                 {
                     event.event(EventType.IDENTITY_PROVIDER_RESPONSE);
                     event.error(Errors.INVALID_SAML_RESPONSE);
                     return ErrorPage.error(session, authSession, Response.Status.BAD_REQUEST, Messages.INVALID_REQUESTER);
-                }*/
+                }
 
                 boolean signed = AssertionUtil.isSignedElement(assertionElement);
                 final boolean assertionSignatureNotExistsWhenRequired = config.isWantAssertionsSigned() && !signed;
